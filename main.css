@@ -50,11 +50,14 @@ p.p2:hover{
 }
 #si{
     background: #515050;
-    left: 420px;
+    left: 600px;
     position: absolute;
     top: 122px;
     width: 550px;
     color: #ffffff;
     padding: 50px;
     display: none;
+}
+.centrar{
+    left: 600px;
 }
