@@ -8,7 +8,39 @@
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>flowers</title>
 </head>
+<script>
+    // Fecha objetivo (22/11/2023 a las 8pm)
+    const objetivo = new Date('2023-11-22T20:00:00');
+
+    // Función para actualizar el contador cada segundo
+    function actualizarCuentaRegresiva() {
+      const ahora = new Date().getTime();
+      const diferencia = objetivo - ahora;
+
+      // Cálculos para días, horas, minutos y segundos
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+      // Obtener el elemento HTML
+      const cuentaRegresiva = document.getElementById('cuentaRegresiva');
+
+      // Actualizar el contenido del elemento con la cuenta regresiva
+      cuentaRegresiva.innerHTML = `Faltan ${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos`;
+    }
+
+    // Actualizar el contador cada segundo
+    setInterval(actualizarCuentaRegresiva, 1000);
+
+
+</script>
+
 <body class="container">
+    <h1 class="titulo margin">Esto es solo el principio... </h1>
+    <div id="cuentaRegresiva" class="titulo"></div>
+
+    
     <div class="night"></div>
     <div class="flowers">
       <div class="flower flower--1">

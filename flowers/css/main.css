@@ -1319,3 +1319,13 @@ body {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
 }
+.titulo{
+  z-index: 1;
+  color: white;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+}
+.margin{
+  margin-bottom: 17px;
+}
