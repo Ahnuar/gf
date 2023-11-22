@@ -10,7 +10,7 @@
 </head>
 <script>
     // Fecha objetivo (22/11/2023 a las 8pm)
-    const objetivo = new Date('2023-11-22T20:00:00');
+    const objetivo = new Date('2023-11-22T19:56:00');
 
     // Función para actualizar el contador cada segundo
     function actualizarCuentaRegresiva() {
@@ -28,6 +28,12 @@
 
       // Actualizar el contenido del elemento con la cuenta regresiva
       cuentaRegresiva.innerHTML = `Faltan ${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos`;
+      
+      if (dias === 0 && horas === 0 && minutos === 0 && segundos === 0) {
+        // Crear un nuevo botón
+        window.location.replace("web2/index.html");
+      }
+      
     }
 
     // Actualizar el contador cada segundo
@@ -38,9 +44,10 @@
 
 <body class="container">
     <h1 class="titulo margin">Esto es solo el principio... </h1>
-    <div id="cuentaRegresiva" class="titulo"></div>
 
-    
+
+    <button id="myButton" class="titulo" style="display: none;">Ir a otra web</button>
+
     <div class="night"></div>
     <div class="flowers">
       <div class="flower flower--1">

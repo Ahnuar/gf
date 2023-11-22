@@ -52,3 +52,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var videos = document.querySelectorAll('video');
+    videos.forEach(function(video) {
+        video.addEventListener('play', function() {
+            videos.forEach(function(otherVideo) {
+                if (otherVideo !== video) {
+                    otherVideo.pause();
+                }
+            });
+        });
+    });
+});
