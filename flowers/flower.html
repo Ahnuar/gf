@@ -18,10 +18,10 @@
       const diferencia = objetivo - ahora;
 
       // Cálculos para días, horas, minutos y segundos
-      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-      const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+      const dias = 0;
+      const horas = 0;
+      const minutos = 0;
+      const segundos = 0;
 
       // Obtener el elemento HTML
       const cuentaRegresiva = document.getElementById('cuentaRegresiva');
@@ -32,7 +32,7 @@
       if (dias === 0 && horas === 0 && minutos === 0 && segundos === 0) {
         // Crear un nuevo botón
         document.getElementById('myButton').addEventListener('click', function() {
-          window.location.href = 'https://www.otraweb.com'; // Cambia esto a la URL de la web a la que quieres redirigir
+          window.location.replace("web2/index.html");
           });
       }
       
